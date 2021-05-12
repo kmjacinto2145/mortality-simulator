@@ -32,7 +32,7 @@ def simulate_life(age, table):
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ["GET", "POST"])
 def landing():
     return render_template("landing.html")
 

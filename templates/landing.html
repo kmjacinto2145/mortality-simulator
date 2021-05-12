@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mortality Simulator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <img class="grave-img" src="{{ url_for('static', filename='images/grave.png') }}" alt="grave">
+        <h1 class="landing-title">When will you die?</h1>
+        <h2 class="subtitle">A mortality simulator</h2>
+        <form class="input" action="{{url_for('results')}}" method="post">
+            <div class="age-input">
+                <label class="age-label" for="age">Age: </label>
+                <input type="text" name="age" value="">
+            </div>
+            <div class="sex-input">
+                <label class="sex-label" for="male">Male</label>
+                <input type="radio" name="sex" value="Male">
+                <label class="sex-label" for="female">Female</label>
+                <input type="radio" name="sex" value="Female"><br>
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>

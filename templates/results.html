@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="results-title">Results</h1>
+        <p class="results-text">You will survive to a median age of {{median_age}}.</p>
+        <p class="results-text">You have a 90% chance of surviving to age {{prob_90}}.</p>
+        <div class="back">
+            <form class="return" action="{{url_for('landing')}}" method="post">
+                <input type="submit" name="" value="Back">
+            </form>
+        </div>
+    </body>
+</html>
